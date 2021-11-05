@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('client.home.index');
-});
+// Route::get('/', function () {
+//     return view('client.home.index');
+// });
+
+use App\Http\Controllers\Client\HomeController;
+
+Route::get('/', [HomeController::class, 'index']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
