@@ -13,21 +13,22 @@
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css master  -->
+    <link rel="stylesheet" href="{{ asset('client/css/master/master.css') }}">
     <!-- custom css nav  -->
     <link rel="stylesheet" href="{{ asset('client/css/nav/nav.css') }}">
     <!-- custom css carousel  -->
     <link rel="stylesheet" href="{{ asset('client/css/carousel/carousel.css') }}">
     <!-- custom css footer  -->
     <link rel="stylesheet" href="{{ asset('client/css/footer/footer.css') }}">
-    <!-- custom css file link  -->
+    <!-- custom css home  -->
     <link rel="stylesheet" href="{{ asset('client/css/home/home.css') }}">
 
+    @yield('css')
 </head>
 <body>
     
     @include('client.layouts.nav')
-
-    @include('client.layouts.carousel')
 
     @yield('content')
 
@@ -44,4 +45,6 @@
 <script src="{{ asset('client/js/nav/nav.js') }}"></script>
 <!-- custom js file link  -->
 <script src="{{ asset('client/js/home/home.js') }}"></script>
+
+@yield('js')
 </html>

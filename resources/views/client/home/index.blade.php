@@ -1,6 +1,11 @@
 @extends('client.master')
 
 @section('content')
+
+<!-- include  carousel -->
+@include('client.layouts.carousel')
+<!-- end include  carousel -->
+
 <!-- features section starts  -->
 
     <section class="features" id="features">

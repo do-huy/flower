@@ -5,12 +5,61 @@
     <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> groco </a>
 
     <nav class="navbar">
-        <a href="#home">trang chủ</a>
-        <!-- <a href="#features">features</a> -->
-        <a href="#products">Sản phẩm</a>
-        <a href="#categories">Danh mục</a>
-        <!-- <a href="#review">review</a> -->
-        <a href="#blogs">Tin tức</a>
+   
+        <ul class="ul-nav">
+            <li>
+                <a href="{{ route('home') }}">trang chủ</a>
+            </li>
+        </ul>
+
+        <ul class="ul-nav">
+            <li>
+                <a href="{{ route('product.client') }}">sản phẩm</a>
+            </li>
+        </ul>
+      
+        <ul class="ul-nav">
+            <li>
+                <a href="#">Tin tức</a>
+            </li>
+        </ul>
+        
+
+        <div class="navbar-inner">
+            <ul class="nav nav-mega">
+                <li class="dropdown">
+                    <a href class="dropdown-toggle" data-toggle="dropdown">
+                        Danh mục <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu mega-menu">
+                    <li>
+                        <div class="row-fluid">
+                        <ul class="media-list span4">
+                            <li class="media">
+                            <div class="media-body">
+                                <div class="media-heading"><a href="#">Chúc mừng</a></div>
+                            </div>
+                            </li>
+                        </ul>
+                        <hr>
+                        <ul class="media-list span4">
+                            <li class="media">
+                            
+                            <div class="media-body">
+                                <div class="media-heading"><a href="#">Sinh nhật</a></div>
+                            </div>
+                            </li>
+                        </ul>
+                    
+                        </div>
+                        
+                       
+                    </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
     </nav>
 
     <div class="icons">
@@ -21,7 +70,7 @@
     </div>
 
     <form action="" class="search-form">
-        <input type="search" id="search-box" placeholder="search here...">
+        <input type="search" id="search-box" placeholder="Tìm kiếm sản phẩm">
         <label for="search-box" class="fas fa-search"></label>
     </form>
 

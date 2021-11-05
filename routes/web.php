@@ -18,8 +18,11 @@ use Illuminate\Support\Facades\Route;
 // });
 
 use App\Http\Controllers\Client\HomeController;
+use App\Http\Controllers\Client\ProductController;
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/san-pham', [ProductController::class, 'index'])->name('product.client');
+Route::get('/chi-tiet-san-pham', [ProductController::class, 'detail'])->name('product.detail.client');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
